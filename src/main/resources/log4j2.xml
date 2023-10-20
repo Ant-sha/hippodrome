@@ -8,13 +8,13 @@
     <Appenders>
         <RollingFile
                 name="LogToFile"
-                fileName="logs/hippodrom.log"
-                filePattern="logs/hippodrom.%d{yyyy-MM-dd}.log"
+                fileName="logs/hippodrome.log"
+                filePattern="logs/hippodrome.%d{yyyy-MM-dd-HH-mm-ss}.log"
                 ignoreExceptions="false">
             <PatternLayout pattern = "%d %-5p %c: %m%n"/>
-
+            <TimeBasedTriggeringPolicy/>
             <DefaultRolloverStrategy >
-<TimeBasedTriggeringPolicy/>
+
                 <Delete basePath="logs" maxDepth="2">
                     <IfFileName glob="hippodrome.*.log" />
                     <IfLastModified age="7d" />
