@@ -8,7 +8,7 @@ public class Horse {
 
     public Horse(String name, double speed, double distance) {
         if (isNull(name)) {
-            throw new IllegalArgumentException("Name cannot be null.");
+           // throw new IllegalArgumentException("Name cannot be null.");
         } else if (name.isBlank()) {
             throw new IllegalArgumentException("Name cannot be blank.");
         }
